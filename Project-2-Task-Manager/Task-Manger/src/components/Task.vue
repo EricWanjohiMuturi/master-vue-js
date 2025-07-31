@@ -4,18 +4,18 @@
 </script>
 <template lang="">
     <div class="task" >
-    <h3>
+      <h3>
         {{ task.name }} - {{ task.id }}
-    </h3>
-    <p>
+      </h3>
+      <p>
         {{ task.description }}
-    </p>
-    <div class="task-check">
+      </p>
+      <div class="task-check">
         <input @click="$emit('toggleCompleted', task.id)" type="checkbox" :checked="task.completed" />
         <label>
-        {{task.completed ? 'done' : 'to-do'}}
+          {{task.completed ? 'done' : 'to-do'}}
         </label>
-    </div>
+      </div>
     </div>
 </template>
 <style lang="scss" scoped>
